@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Aladin');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+.MainContainer {
+    width: 80vw;
+    height: 70vh;
+    position: relative;
+    margin: 6rem auto 0;
+    border-radius: 30px;
+    border: 5px solid var(--LightBlue);
+    box-shadow: 5px 5px 20px #0c1a30;
+    background: linear-gradient(90deg, var(--LightBlue) 30%, var(--Yellow) 30%);
+}
+
+.CardContainer {
+    position: relative;
+}
+
+.Row {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+}
+
+.MainPicture {
+    width: 30%;
+    text-align: end;
+    position: relative;
+}
+
+.MainHeader {
+    width: 35%;
+    text-align: left;
+    margin: 5% 0 auto 10%;
+    padding-top: 2em;
+    position: relative;
+}
+
+.MainPicture>img {
+    width: 270px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 35%;
+}
+
+.MainHeader>img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    padding: 5px 5px 0 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: var(--Yellow);
+}
+
+.MainHeader h1 {
+    font-family: 'Aladin', sans-serif;
+    font-size: 50px;
+    margin: 0;
+}
+
+.MainHeader h1>span {
+    color: var(--LightBlue);
+    display: block;
+    font-family: 'Handlee';
+}
+
+.MainHeader h1 span>svg {
+    color: white;
+    width: 30px;
+    height: 30px;
+    transform: rotate(10deg);
+}
+
+.MainHeader h2 {
+    margin: 0.5em 0;
+    font-size: 14px;
+}
+
+.MainHeader>button {
+    background-color: var(--DarkBlue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin-top: 1.5em;
+    font-size: 12px;
+}
+
+.MainHeader>button:hover {
+    background-color: var(--LightBlue);
+}
+
+.AdditionalPictures {
+    width: 35%;
+    align-items: center;
+    position: relative;
+}
+
+.AdditionalPictures>img#dogPicture {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+.AdditionalPictures>img#dogHeart {
+    width: 28px;
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    transform: rotate(30deg);
+}
+
+.Paws {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+.HeaderPaws {
+    position: absolute;
+    top: 52%;
+    right: 50%;
+}
+
+.TopPaws {
+    position: absolute;
+    top: -60px;
+    right: 68%;
+}
+
+.LeftPaws {
+    position: absolute;
+    bottom: 40px;
+    left: -50px;
+}

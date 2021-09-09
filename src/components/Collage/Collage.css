@@ -1,0 +1,44 @@
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 5px 35px) 5px;
+    grid-template-rows: repeat(5, 25px);
+    grid-template-areas: ".";
+    position: absolute;
+    bottom: -55px;
+    left: 40%;
+}
+
+.GridItem>img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: var(--Yellow);
+}
+
+.GridItem:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.GridItem:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.GridItem:nth-child(3) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.GridItem:last-of-type {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}

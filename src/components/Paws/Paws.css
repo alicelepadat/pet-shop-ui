@@ -1,0 +1,51 @@
+.Paws {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transform: rotate(15deg);
+}
+
+.BluePaws {
+    color: var(--LightBlue);
+}
+
+.YellowPaws {
+    color: var(--Yellow);
+}
+
+.Paws>div:first-of-type {
+    text-align: left;
+}
+
+.Paws>div:last-of-type {
+    text-align: right;
+}
+
+.Paws>div:first-of-type>svg {
+    width: 60%;
+    height: 60%;
+}
+
+.Paws>div:last-of-type>svg {
+    width: 30%;
+    height: 30%;
+    opacity: 0.4;
+}
+
+.Small {
+    width: 25px;
+}
+
+.Small>div:first-of-type>svg {
+    width: 60%;
+    opacity: 0.4;
+}
+
+.Small>div:last-of-type>svg {
+    width: 60%;
+}
+
+.Medium {
+    width: 50px;
+}

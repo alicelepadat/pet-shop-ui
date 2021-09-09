@@ -1,0 +1,44 @@
+.Nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.NavItem {
+    padding: 1rem 1.5rem;
+    font-size: 14px;
+}
+
+.NavItem>button {
+    color: var(--Yellow);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.NavItem>button:hover {
+    color: var(--DarkYellow);
+}
+
+.NavItem:nth-last-child(-n+3)>button {
+    color: var(--LightBlue);
+}
+
+.NavItem:nth-last-child(-n+3)>button:hover {
+    color: var(--DarkBlue);
+}
+
+.NavLogo {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.NavLogo:hover {
+    color: var(--DarkBlue);
+}
