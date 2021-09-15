@@ -120,6 +120,7 @@
         top: 100%;
         flex-direction: column;
         padding: 10px 2rem;
+        box-sizing: border-box;
         background-color: var(--LightBlue);
         transform: translateY(-200%);
         transition: transform 1s ease-out;
