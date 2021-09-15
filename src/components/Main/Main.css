@@ -1,87 +1,104 @@
 @import url('https://fonts.googleapis.com/css?family=Aladin');
 @import url('https://fonts.googleapis.com/css?family=Handlee');
+
 .MainContainer {
     width: 80vw;
     height: 70vh;
     position: relative;
-    margin: 6rem auto 0;
     border-radius: 30px;
     border: 5px solid var(--LightBlue);
     box-shadow: 5px 5px 20px #0c1a30;
     background: linear-gradient(90deg, var(--LightBlue) 30%, var(--Yellow) 30%);
-}
-
-.CardContainer {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .Row {
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
+    flex-flow: row nowrap;
+    align-content: stretch;
 }
 
-.MainPicture {
-    width: 30%;
-    text-align: end;
+.MainPicture, .MainHeader, .AdditionalPictures {
+    width: 35%;
+    height: auto;
+}
+
+.MainPicture, .AdditionalPictures {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     position: relative;
 }
 
 .MainHeader {
-    width: 35%;
     text-align: left;
-    margin: 5% 0 auto 10%;
-    padding-top: 2em;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+    padding: 1rem;
 }
 
-.MainPicture>img {
+
+.MainPicture > img {
     width: 270px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 35%;
+    height: auto;
 }
 
-.MainHeader>img {
-    position: absolute;
-    top: 0;
-    right: 0;
+.HeaderContent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.HeaderContent > img {
     width: 40px;
+    height: 40px;
     padding: 5px 5px 0 5px;
+    margin-left: 1rem;
     border-radius: 50%;
     border: 2px solid white;
     background-color: var(--Yellow);
 }
 
-.MainHeader h1 {
+.HeaderGroup > h1 {
     font-family: 'Aladin', sans-serif;
     font-size: 50px;
     margin: 0;
 }
 
-.MainHeader h1>span {
-    color: var(--LightBlue);
-    display: block;
-    font-family: 'Handlee';
+.HeaderGroup > div {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
 }
 
-.MainHeader h1 span>svg {
+.HeaderGroup > div > p {
+    color: var(--LightBlue);
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Handlee', sans-serif;
+}
+
+.HeaderGroup > div > p svg {
     color: white;
     width: 30px;
     height: 30px;
     transform: rotate(10deg);
 }
 
-.MainHeader h2 {
+.HeaderGroup > h2 {
     margin: 0.5em 0;
     font-size: 14px;
 }
 
-.MainHeader>button {
+.HeaderActions > button {
     background-color: var(--DarkBlue);
     color: white;
     border: none;
@@ -91,36 +108,36 @@
     font-size: 12px;
 }
 
-.MainHeader>button:hover {
+.HeaderActions > button:hover {
     background-color: var(--LightBlue);
 }
 
-.AdditionalPictures {
-    width: 35%;
-    align-items: center;
-    position: relative;
+.AdditionalPictures > img#dogPicture {
+    width: auto;
+    height: 100%;
+    max-width: 350px;
+    max-height: 350px;
 }
 
-.AdditionalPictures>img#dogPicture {
-    width: 100%;
+.AdditionalPictures > img#dogHeart {
+    width: 28px;
     height: auto;
     position: absolute;
-    bottom: -1px;
-    left: 0;
-}
-
-.AdditionalPictures>img#dogHeart {
-    width: 28px;
-    position: absolute;
-    top: 40%;
-    right: 10%;
+    bottom: 300px;
+    right: 20%;
     transform: rotate(30deg);
 }
 
-.Paws {
+.CardContainer {
     position: absolute;
-    top: -20px;
-    right: 0;
+    top: -3.5rem;
+    right: 20%;
+}
+
+.LargerPaws {
+    position: absolute;
+    top: -2.5rem;
+    right: 0.5rem;
 }
 
 .HeaderPaws {
@@ -131,12 +148,174 @@
 
 .TopPaws {
     position: absolute;
-    top: -60px;
+    top: -5rem;
     right: 68%;
 }
 
 .LeftPaws {
     position: absolute;
     bottom: 40px;
-    left: -50px;
+    left: -5rem;
+}
+
+.Collage {
+    position: absolute;
+    bottom: -55px;
+    left: 40%;
+}
+
+@media only screen and (max-width: 1190px) {
+    .MainContainer {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background: none;
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+        overflow-x: hidden;
+    }
+
+    .Row {
+        align-items: center;
+    }
+
+    .MainPicture, .MainHeader {
+        width: 50%;
+    }
+
+    .MainHeader {
+        padding: 4rem;
+    }
+
+    .AdditionalPictures {
+        order: 1;
+        width: 0;
+        height: 0;
+    }
+
+    .AdditionalPictures > img, .HeaderPaws, .LeftPaws, .LargerPaws {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .Row {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .MainHeader::before {
+        content: "";
+        background: url('../../images/main-dog.webp') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.2;
+    }
+
+    .MainPicture, .AdditionalPictures {
+        order: 1;
+        width: 0;
+        height: 0;
+    }
+
+    .MainPicture > img, .AdditionalPictures > img, .Collage {
+        display: none;
+    }
+
+    .MainHeader {
+        width: 100%;
+        height: 100%;
+        padding:0;
+        margin-left: 1rem;
+    }
+
+    .HeaderContent > img {
+        display: none;
+    }
+
+    .HeaderGroup {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CardContainer {
+        top:inherit;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 840px) {
+    .Collage {
+        display: none;
+    }
+    
+    .CardContainer {
+        top:8.5rem;
+        right: inherit;
+        left: 35%;
+    }
+}
+
+@media only screen and (min-width: 840px) and (max-width: 1190px){
+    .Row {
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        margin-left: 30%;
+    }
+
+    .MainPicture {
+        height:50%;
+    }
+
+    .MainPicture>img {
+        width: auto;
+        height: 90%;
+    }
+
+    .MainHeader {
+        width: 60%;
+        height: 20%;
+        padding: 1rem;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .HeaderContent {
+        justify-content: center;
+    }
+
+    .AdditionalPictures {
+        width: 100%;
+        height: 30%;
+    }
+
+    .AdditionalPictures>img {
+        display: block;
+    }
+
+    .AdditionalPictures>img#dogHeart {
+        bottom: 190px;
+        right: 250px;
+    }
+
+    .Collage {
+        left: 20%;
+        top: 65%;
+    }
+
+    .CardContainer {
+        top: 30%;
+        left: 22.5%;
+        right: inherit;
+    }
 }

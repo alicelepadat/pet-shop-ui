@@ -26,9 +26,9 @@ body::before {
   opacity: 0.2;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 840px) {
   body {
-    background: linear-gradient(180deg, var(--LightBlue) 30%, var(--Yellow) 30%);
+    background: var(--Yellow);
   }
   body::before {
     background: none;

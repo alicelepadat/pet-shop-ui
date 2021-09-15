@@ -9,7 +9,7 @@ export default function Collage() {
             {
                 items.map(item => (
                     <div key={item.id} className="GridItem">
-                        <img src={item.url} alt="Dog"></img>
+                        <img src={item.url} alt="Dog" width={50} height={50}/>
                     </div>
                 ))
             }

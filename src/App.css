@@ -1,13 +1,21 @@
+.App {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .BgCircle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 10rem;
-  height: 20rem;
-  border-bottom-right-radius: 20rem;
-  border-top-right-radius: 20rem;
-  border: 2px dotted white;
-  border-left: 0;
-  transform: rotate(-45deg);
-  z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 15rem;
+    height: 15rem;
+    border: 2px dotted white;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 15rem 0 0;
+    z-index: -1;
 }

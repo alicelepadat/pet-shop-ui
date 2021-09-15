@@ -6,11 +6,10 @@ import './App.css';
 
 function App() {
   return (
-    <React.Fragment>
+    <div className="App">
       <Main />
       <div className="BgCircle" />
-
-    </React.Fragment>
+    </div>
   );
 }
 

@@ -38,12 +38,12 @@
 }
 
 .Small>div:first-of-type>svg {
-    width: 60%;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .Small>div:last-of-type>svg {
-    width: 60%;
+    width: 40%;
+    opacity: 0.5;
 }
 
 .Medium {

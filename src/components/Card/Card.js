@@ -6,8 +6,8 @@ export default function Card(props) {
     return (
         <div className="Card">
             <div className="CardImage">
-                <img id="healthyHeart" src={props.heart} alt="Heart"></img>
-                <img id="healthyDog" src={props.dog} alt="Dog"></img>
+                <img id="healthyHeart" src={props.heart} alt="Heart" width={30} height={30}/>
+                <img id="healthyDog" src={props.dog} alt="Dog" width={100} height={107}/>
             </div>
             <div className="CardContent">
                 <h2>{props.header}</h2>
