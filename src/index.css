@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+:root {
+  --Yellow: #FFE459;
+  --DarkYellow: #FFC947;
+  --LightBlue: #6b86a1;
+  --DarkBlue: #0c1a30;
+  --Gray: #534b3f;
+  --LightGray: #cbc8c2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, var(--LightBlue) 30%, var(--Yellow) 30%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Raleway', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+body::before {
+  content: "";
+  background: url('images/main-dog.webp') no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 70%;
+  left: 0;
+  bottom: 0;
+  opacity: 0.2;
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    background: var(--Yellow);
+  }
+  body::before {
+    background: none;
+  }
+}

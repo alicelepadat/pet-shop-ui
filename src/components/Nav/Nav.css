@@ -1,0 +1,170 @@
+.Nav {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.NavLogo > button {
+    padding: 0 3rem 0 2rem;
+}
+
+.NavItem.Active > button {
+    border-bottom: 2px solid var(--DarkYellow);
+}
+
+.NavItems {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.NavItem {
+    display: inline;
+    float: none;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.NavItem > button {
+    font-size: 14px;
+}
+
+.NavItem > button, .NavLogo > button, .NavToggle {
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.NavToggle {
+    display: none;
+    float: right;
+    padding: 0.5rem 0.7rem;
+    margin: 0 1rem 0 auto;
+}
+
+.NavToggle > svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.NavLogo > button {
+    color: white;
+    font-size: 16px;
+    margin-right: 1rem;
+}
+
+.NavLogo > button:hover, .NavLogo.Active>button {
+    background: -webkit-linear-gradient(45deg, var(--DarkYellow) 40%, var(--DarkBlue) 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.NavItem > button {
+    color: var(--Yellow);
+    border-bottom: 2px solid transparent;
+}
+
+.NavItem > button:hover {
+    border-bottom: 2px solid var(--DarkYellow);
+}
+
+@media only screen and (min-width: 1470px) and (max-width: 1920px) {
+    .NavItem:nth-last-child(-n+2) > button {
+        color: var(--LightBlue);
+    }
+
+    .NavItem:nth-last-child(-n+2) > button:hover,
+    .NavItem.Active:nth-last-child(-n+2) > button {
+        border-bottom: 2px solid var(--DarkBlue);
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .NavItem:nth-last-child(-n+1) > button {
+        color: var(--LightBlue);
+    }
+
+    .NavItem:nth-last-child(-n+1) > button:hover,
+    .NavItem.Active:nth-last-child(-n+1) > button {
+        border-bottom: 2px solid var(--DarkBlue);
+    }
+}
+
+@media only screen and (min-width: 1190px) and (max-width: 1470px) {
+    .NavItem:nth-last-child(-n+3) > button {
+        color: var(--LightBlue);
+    }
+
+    .NavItem:nth-last-child(-n+3) > button:hover,
+    .NavItem.Active:nth-last-child(-n+3) > button {
+        border-bottom: 2px solid var(--DarkBlue);
+    }
+}
+
+@media only screen and (max-width: 1190px) {
+    .Nav {
+        background-color: var(--LightBlue);
+    }
+
+    .NavItems {
+        display: flex;
+        width: 100%;
+        float: left;
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        padding: 10px 2rem;
+        box-sizing: border-box;
+        background-color: var(--LightBlue);
+        transform: translateY(-200%);
+        transition: transform 0.5s ease-out;
+    }
+
+    .NavItem > button {
+        color: white;
+        font-size: 16px;
+    }
+
+    .NavLogo {
+        z-index: 5;
+        background-color: var(--LightBlue);
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .NavLogo > button {
+        font-size: 20px;
+    }
+
+    .NavItem > button:hover {
+        color: var(--DarkBlue);
+    }
+
+    .NavCollapsed {
+        transform: translateY(0);
+    }
+
+    .NavToggle {
+        display: block;
+        z-index: 5;
+    }
+
+    .NavToggle {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .NavToggleRotate {
+        transform: rotate(180deg);
+    }
+
+    .NavToggle > svg:hover, .Active > button {
+        color: var(--DarkBlue);
+    }
+}

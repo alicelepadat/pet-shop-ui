@@ -1,0 +1,33 @@
+.GridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 5px 35px) 5px;
+    grid-template-rows: repeat(5, 25px);
+    grid-template-areas: ".";
+}
+
+.GridItem > img {
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: var(--Yellow);
+}
+
+.GridItem:first-of-type {
+    grid-column: 1/ span 3;
+    grid-row: 4/5;
+}
+
+.GridItem:nth-child(2) {
+    grid-column: 3/span 3;
+    grid-row: 3/4;
+}
+
+.GridItem:nth-child(3) {
+    grid-column: 5 / span 3;
+    grid-row: 2/3;
+}
+
+.GridItem:last-of-type {
+    grid-column: 7/ span 3;
+    grid-row: 1/2;
+}

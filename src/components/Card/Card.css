@@ -1,0 +1,69 @@
+.Card {
+    width: 130px;
+    height: 100px;
+    background: linear-gradient(180deg, var(--Yellow) 50%, white 50%);
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.CardImage {
+    height: 50%;
+    position: relative;
+}
+
+.CardContent {
+    height: 50%;
+}
+
+.CardImage>img#healthyHeart {
+    width: 28px;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    left: -14px;
+    transform: rotate(-15deg);
+}
+
+.CardImage>img#healthyDog {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    left: 20px;
+}
+
+.CardContent>h2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--LightBlue);
+    margin: 10px 0 5px 0;
+}
+
+.CardInfo>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    justify-content: center;
+}
+
+.CardInfo>ul>li {
+    color: var(--Gray);
+    font-weight: bold;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.CardInfo>ul>li:first-of-type {
+    border-right: 2px solid var(--Gray);
+}
+
+.CardInfo>ul>li:hover {
+    color: var(--LightGray);
+}
