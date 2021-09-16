@@ -123,7 +123,7 @@
         box-sizing: border-box;
         background-color: var(--LightBlue);
         transform: translateY(-200%);
-        transition: transform 1s ease-out;
+        transition: transform 0.5s ease-out;
     }
 
     .NavItem > button {
@@ -157,7 +157,7 @@
     }
 
     .NavToggle {
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
 
     .NavToggleRotate {

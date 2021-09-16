@@ -8,6 +8,12 @@
   --LightGray: #cbc8c2;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: linear-gradient(90deg, var(--LightBlue) 30%, var(--Yellow) 30%);
