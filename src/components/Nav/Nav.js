@@ -46,7 +46,11 @@ export default function Nav() {
                     ))
                 }
             </ul>
-            <button className={`NavToggle ${isCollapsed ? "NavToggleRotate" : ""}`} type="button" onClick={handleNavCollapse}>
+            <button
+                className={`NavToggle ${isCollapsed ? "NavToggleRotate" : ""}`}
+                type="button"
+                aria-label="Nav Toggle"
+                onClick={handleNavCollapse}>
                  <BiDownArrow />
             </button>
         </nav>
